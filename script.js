@@ -21,17 +21,24 @@ const soundBoard = document.getElementById("soundboard");
 
 const createSoundBoard = (audioscr) => {
   const buttonEl = document.createElement("button");
-
   buttonEl.textContent = audioscr.fileName;
-
-  const audioEl = document.createElement("audio");
-
-  audioEl.src = `SoundEffects/${audioscr.fileName}`;
-
   buttonEl.addEventListener("click", () => audioEl.play());
 
-  audioscr.audioEl = audioEl;
+  const audioEl = document.createElement("audio");
+  audioEl.src = `SoundEffects/${audioscr.fileName}`;
 
+  // const loopButton = document.createElement("loopButton")
+  // loopButton.textContent = "Loop Off"
+  // audioscr.loop = false
+
+  buttonEl.addEventListener("click", () => {
+    buttonEl.classList.add("btnDown");
+    audioEl.play();
+  });
+
+  audioEl.addEventListener("ended", () => {
+    buttonEl.classList.remove("btnDown");
+  });
   return buttonEl;
 };
 
