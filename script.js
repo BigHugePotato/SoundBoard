@@ -1,7 +1,7 @@
 // document.addEventListener("DOMContentLoaded", (event) => {
 const sounds = [
   { fileName: "dry-fart.mp3" },
-  { fileName: "eD" },
+  { fileName: "eD.mp3" },
   { fileName: "your-phone-linging.mp3" },
 ];
 
@@ -13,14 +13,18 @@ const createSoundBoard = (audioscr) => {
 
   const audioEl = document.createElement("audio");
 
-  audioEl.src = `${SoundEffects}/${audioscr.fileName}`
+  audioEl.src = `SoundEffects/${audioscr.fileName}`
+
+  buttonEl.addEventListener("click", () => audioEl.play());
 
   audioscr.audioEl = audioEl
+
+  return buttonEl
 };
 
 sounds.forEach((soundObj) => {
   soundBoard.append(createSoundBoard(soundObj));
 });
 
-createSoundBoard();
+
 
