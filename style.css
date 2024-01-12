@@ -1,37 +1,60 @@
 @keyframes rainbow {
-    0% { background-color: red; }
-    10% { background-color: orange; }
-    20% { background-color: yellow; }
-    30% { background-color: lime; }
-    40% { background-color: green; }
-    50% { background-color: aqua; }
-    60% { background-color: blue; }
-    70% { background-color: navy; }
-    80% { background-color: purple; }
-    90% { background-color: fuchsia; }
-    100% { background-color: red; }
+  0% {
+    background-color: red;
+  }
+  10% {
+    background-color: orange;
+  }
+  20% {
+    background-color: yellow;
+  }
+  30% {
+    background-color: lime;
+  }
+  40% {
+    background-color: green;
+  }
+  50% {
+    background-color: aqua;
+  }
+  60% {
+    background-color: blue;
+  }
+  70% {
+    background-color: navy;
+  }
+  80% {
+    background-color: purple;
+  }
+  90% {
+    background-color: fuchsia;
+  }
+  100% {
+    background-color: red;
+  }
 }
 
 .rainbow-animation {
-    animation: rainbow 3s linear infinite;
+  animation: rainbow 3s linear infinite;
 }
 
-
-
 body {
-    margin: 1rem;
-    padding: 0;
-    box-sizing: border-box;
+  width: 100vh;
+  margin: 1rem;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #soundboard {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
   gap: 1rem;
-  background-color: gray; 
+  background-color: gray;
   padding: 1rem;
-  grid-template-columns: repeat(4, 2fr);
-  max-width: min-content;
-
+  grid-template-columns: auto;
   border-radius: 0.75rem;
   outline: 3px solid #888;
   border: 2px solid #000;
@@ -39,23 +62,26 @@ body {
 }
 
 button {
-    background-color: blue;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-color: blue;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
 
-    border: black;
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    padding: 1rem;
-    color: aquamarine;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added for 3D effect */
+  border: black;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  padding: 1rem;
+  color: aquamarine;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added for 3D effect */
 }
 
 button:hover {
-    background-color: purple;
+  background-color: purple;
 }
 
 .btnDown {
-    /* border: 2px white solid; */
+  /* border: 2px white solid; */
 }
