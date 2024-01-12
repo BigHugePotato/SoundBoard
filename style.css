@@ -1,3 +1,23 @@
+@keyframes rainbow {
+    0% { background-color: red; }
+    10% { background-color: orange; }
+    20% { background-color: yellow; }
+    30% { background-color: lime; }
+    40% { background-color: green; }
+    50% { background-color: aqua; }
+    60% { background-color: blue; }
+    70% { background-color: navy; }
+    80% { background-color: purple; }
+    90% { background-color: fuchsia; }
+    100% { background-color: red; }
+}
+
+.rainbow-animation {
+    animation: rainbow 3s linear infinite;
+}
+
+
+
 body {
     margin: 1rem;
     padding: 0;
@@ -28,6 +48,10 @@ button {
     
 }
 
+button:hover {
+    background-color: purple;
+}
+
 .btnDown {
-    border: 2px yellow solid;
+    border: 2px white solid;
 }

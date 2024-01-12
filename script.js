@@ -1,5 +1,5 @@
 const sounds = [
-  { fileName: "dry-fart.mp3" },
+  { fileName: "dry-fart.mp3", isPlaying: false },
   { fileName: "eD.mp3" },
   { fileName: "your-phone-linging.mp3" },
   { fileName: "ah-shit-here-we-go-again.mp3" },
@@ -12,7 +12,7 @@ const sounds = [
   { fileName: "dog-doing.mp3" },
   { fileName: "gay-echo.mp3" },
   { fileName: "perfect-fart.mp3" },
-  { fileName: "toothless-dancing.mp3" },
+  { fileName: "toothless-dancing.mp3", isPlaying: false },
   { fileName: "vine-boom.mp3" },
   { fileName: "yeah-boiii.mp3" },
 ];
@@ -22,22 +22,29 @@ const soundBoard = document.getElementById("soundboard");
 const createSoundBoard = (audioscr) => {
   const buttonEl = document.createElement("button");
   buttonEl.textContent = audioscr.fileName;
-  buttonEl.addEventListener("click", () => audioEl.play());
+//   buttonEl.addEventListener("click", () => audioEl.play());
 
   const audioEl = document.createElement("audio");
   audioEl.src = `SoundEffects/${audioscr.fileName}`;
-
-  // const loopButton = document.createElement("loopButton")
-  // loopButton.textContent = "Loop Off"
-  // audioscr.loop = false
+    audioscr.audioEl = audioEl;
+    audioscr.isPlaying = false;
 
   buttonEl.addEventListener("click", () => {
-    buttonEl.classList.add("btnDown");
-    audioEl.play();
+    if (audioscr.isPlaying) {
+      audioEl.pause();
+      audioEl.currentTime = 0;
+      audioscr.isPlaying = false
+      buttonEl.classList.remove("rainbow-animation", "btnDown");
+    } else {
+      audioEl.play();
+      audioscr.isPlaying = true
+      buttonEl.classList.add("rainbow-animation", "btnDown");
+    }
   });
 
   audioEl.addEventListener("ended", () => {
-    buttonEl.classList.remove("btnDown");
+    audioscr.isPlaying = false
+    buttonEl.classList.remove("rainbow-animation", "btnDown");
   });
   return buttonEl;
 };
