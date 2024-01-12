@@ -1,27 +1,27 @@
 const sounds = [
-  { fileName: "dry-fart.mp3", isPlaying: false },
-  { fileName: "eD.mp3" },
-  { fileName: "your-phone-linging.mp3" },
-  { fileName: "ah-shit-here-we-go-again.mp3" },
-  { fileName: "anime-wow.mp3" },
-  { fileName: "aughhh.mp3" },
-  { fileName: "bombastic-side-eye.mp3" },
-  { fileName: "brah.mp3" },
-  { fileName: "chinese-rap-song.mp3" },
-  { fileName: "clash-royale-hog-rider.mp3" },
-  { fileName: "dog-doing.mp3" },
-  { fileName: "gay-echo.mp3" },
-  { fileName: "perfect-fart.mp3" },
-  { fileName: "toothless-dancing.mp3", isPlaying: false },
-  { fileName: "vine-boom.mp3" },
-  { fileName: "yeah-boiii.mp3" },
+  { fileName: "dry-fart.mp3", name: "Fart Dry" },
+  { fileName: "eD.mp3", name: "Emotional Damage" },
+  { fileName: "your-phone-linging.mp3", name: "Phone Linging" },
+  { fileName: "ah-shit-here-we-go-again.mp3", name: "Again" },
+  { fileName: "anime-wow.mp3", name: "Wow" },
+  { fileName: "aughhh.mp3", name: "Aguhh" },
+  { fileName: "bombastic-side-eye.mp3", name: "Side Eye" },
+  { fileName: "brah.mp3", name: "Brah" },
+  { fileName: "chinese-rap-song.mp3", name: "Rap Song" },
+  { fileName: "clash-royale-hog-rider.mp3", name: "Hog Rider" },
+  { fileName: "dog-doing.mp3", name: "Dog Doing" },
+  { fileName: "gay-echo.mp3", name: "Gay Echo" },
+  { fileName: "perfect-fart.mp3", name: "Fart Wet" },
+  { fileName: "toothless-dancing.mp3", name: "Dragon Dance" },
+  { fileName: "vine-boom.mp3", name: "Vine Boom" },
+  { fileName: "yeah-boiii.mp3", name: "Yeah Boi" },
 ];
 
 const soundBoard = document.getElementById("soundboard");
 
 const createSoundBoard = (audioscr) => {
   const buttonEl = document.createElement("button");
-  buttonEl.textContent = audioscr.fileName;
+  buttonEl.textContent = audioscr.name;
 //   buttonEl.addEventListener("click", () => audioEl.play());
 
   const audioEl = document.createElement("audio");

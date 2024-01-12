@@ -40,12 +40,16 @@ body {
 
 button {
     background-color: blue;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+
+    border: black;
     height: 6rem;
     width: 6rem;
     border-radius: 50%;
     padding: 1rem;
     color: aquamarine;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added for 3D effect */
 }
 
 button:hover {
@@ -53,5 +57,5 @@ button:hover {
 }
 
 .btnDown {
-    border: 2px white solid;
+    /* border: 2px white solid; */
 }
