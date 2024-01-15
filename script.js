@@ -15,13 +15,22 @@ const sounds = [
   { fileName: "toothless-dancing.mp3", name: "Dragon Dance" },
   { fileName: "vine-boom.mp3", name: "Vine Boom" },
   { fileName: "yeah-boiii.mp3", name: "Yeah Boi" },
+  { fileName: "among-us.mp3", name: "Among Us" },
+  { fileName: "best-friends.mp3", name: "Best Friends" },
+  { fileName: "bonk.mp3", name: "Bonk!" },
+  { fileName: "continue.mp3", name: "To Be Continued" },
+  { fileName: "they-ask.mp3", name: "You're Fine" },
+  { fileName: "snore-mimi.mp3", name: "Snore Mimi" },
+  { fileName: "suprise-mf.mp3", name: "Suprise Mf" },
+  { fileName: "wide-putin.mp3", name: "Wide Putin" },
+  { fileName: "laugh.mp3", name: "HAHA" },
 ];
 
 const soundBoard = document.getElementById("soundboard");
 
 const createSoundBoard = (audioscr) => {
   const buttonEl = document.createElement("button");
-  buttonEl.textContent = audioscr.name;
+  buttonEl.setAttribute("title", audioscr.name);
 
   const audioEl = document.createElement("audio");
   audioEl.src = `SoundEffects/${audioscr.fileName}`;
