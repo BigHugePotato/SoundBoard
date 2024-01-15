@@ -30,6 +30,7 @@ const soundBoard = document.getElementById("soundboard");
 
 const createSoundBoard = (audioscr) => {
   const buttonEl = document.createElement("button");
+//   const labelEl = document.createElement
   buttonEl.setAttribute("title", audioscr.name);
 
   const audioEl = document.createElement("audio");
@@ -42,17 +43,17 @@ const createSoundBoard = (audioscr) => {
       audioEl.pause();
       audioEl.currentTime = 0;
       audioscr.isPlaying = false;
-      buttonEl.classList.remove("rainbow-animation", "btnDown");
+      buttonEl.classList.remove("rainbow-animation");
     } else {
       audioEl.play();
       audioscr.isPlaying = true;
-      buttonEl.classList.add("rainbow-animation", "btnDown");
+      buttonEl.classList.add("rainbow-animation");
     }
   });
 
   audioEl.addEventListener("ended", () => {
     audioscr.isPlaying = false;
-    buttonEl.classList.remove("rainbow-animation", "btnDown");
+    buttonEl.classList.remove("rainbow-animation");
   });
   return buttonEl;
 };

@@ -95,23 +95,29 @@ button:active {
   background-color: rgb(125, 167, 181);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
-/* .btnDown {
-  background-color: #666; /* Even lighter when active */
 
-
-  /* Desktop screens */
-@media screen and (min-width: 200px) {
-  button[title]:hover::after {
-    content: attr(title);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 14px;
-    z-index: 1;
-  }
+button[title]::after {
+  content: attr(title);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  /* Additional styling for positioning and appearance */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100%;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
 }
+
+button[title]:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* button:hover {
+  background-color: green;
+} */
