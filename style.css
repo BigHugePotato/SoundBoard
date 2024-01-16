@@ -63,20 +63,21 @@ body {
 
 button {
   background-image: linear-gradient(
-      45deg,
-      rgba(0, 123, 255, 0.8),
-      rgba(0, 123, 255, 0) 70.71%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(33, 150, 243, 0.8),
-      rgba(33, 150, 243, 0) 70.71%
-    ),
-    linear-gradient(
-      225deg,
-      rgba(100, 181, 246, 0.8),
-      rgba(100, 181, 246, 0) 70.71%
-    );
+    45deg,
+    rgba(169, 169, 169, 0.8),
+    rgba(169, 169, 169, 0) 0.71%
+  ),
+  linear-gradient(
+    135deg,
+    rgba(192, 192, 192, 0.8),
+    rgba(192, 192, 192, 0) 60.71%
+  );
+  
+
+  
+
+  
+  
   outline: none;
   border: none;
   height: 6rem;
