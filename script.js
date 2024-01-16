@@ -1,9 +1,10 @@
 const sounds = [
-  { fileName: "dry-fart.mp3", name: "Fart Dry" },
-  { fileName: "perfect-fart.mp3", name: "Fart Wet" },
+  { fileName: "dry-fart.mp3", name: "Fart Dry", color: "green"},
+
   { fileName: "eD.mp3", name: "Emotional Damage" },
   { fileName: "your-phone-linging.mp3", name: "Phone Linging" },
   { fileName: "ah-shit-here-we-go-again.mp3", name: "Again" },
+  { fileName: "perfect-fart.mp3", name: "Fart Wet", color: "green" },
   { fileName: "anime-wow.mp3", name: "Wow" },
   { fileName: "aughhh.mp3", name: "Aguhh" },
   { fileName: "bombastic-side-eye.mp3", name: "Side Eye" },
@@ -30,8 +31,8 @@ const soundBoard = document.getElementById("soundboard");
 
 const createSoundBoard = (audioscr) => {
   const buttonEl = document.createElement("button");
-//   const labelEl = document.createElement
   buttonEl.setAttribute("title", audioscr.name);
+  buttonEl.style.backgroundColor = audioscr.color || "gray"
 
   const audioEl = document.createElement("audio");
   audioEl.src = `SoundEffects/${audioscr.fileName}`;
