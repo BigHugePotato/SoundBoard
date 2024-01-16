@@ -84,7 +84,7 @@ button {
   height: 6rem;
   width: 6rem;
   border-radius: 9px;
-  padding: 1rem;
+  padding: 5px;
   color: aquamarine;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -97,19 +97,14 @@ button:active {
 }
 
 button[title]::after {
+  /* display: flex; */
   content: attr(title);
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;
-  /* Additional styling for positioning and appearance */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 100%;
-  background-color: #fff;
   padding: 5px;
   border-radius: 5px;
-  white-space: nowrap;
+
 }
 
 button[title]:hover::after {
