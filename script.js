@@ -43,17 +43,17 @@ const createSoundBoard = (audioscr) => {
       audioEl.pause();
       audioEl.currentTime = 0;
       audioscr.isPlaying = false;
-      buttonEl.classList.remove("rainbow-animation");
+      buttonEl.classList.remove("playing");
     } else {
       audioEl.play();
       audioscr.isPlaying = true;
-      buttonEl.classList.add("rainbow-animation");
+      buttonEl.classList.add("playing");
     }
   });
 
   audioEl.addEventListener("ended", () => {
     audioscr.isPlaying = false;
-    buttonEl.classList.remove("rainbow-animation");
+    buttonEl.classList.remove("playing");
   });
   return buttonEl;
 };
