@@ -7,7 +7,7 @@
 }
 
 body {
-  /* width: 100vh; */
+  width: 100vw;
   margin: 1rem;
   padding: 0;
   box-sizing: border-box;
@@ -114,13 +114,28 @@ button[title]:hover::after {
 
 @media screen and (max-width: 425px) {
   #soundboard {
-    width: 100vw;
-    gap: 0.5rem;
-    background-color: rgb(147, 121, 121);
-    padding: 1em;
-    grid-template-columns: repeat(5, 1fr);
-    border-radius: 0.75rem;
-    outline: 3px solid #888;
-    box-shadow: 0px 2px 6px 2px #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 70vh;
+    padding: 5px;
+    gap: 0.3rem;
+
   }
+
+  button {
+    height: 13%;
+    width: 18%;
+    border-radius: 9px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  
+button[title]:hover::after {
+  visibility: hidden;
+  opacity: 0;
+}
 }
