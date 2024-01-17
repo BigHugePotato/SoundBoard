@@ -1,7 +1,11 @@
 const sounds = [
   { fileName: "eD.mp3", name: "Emotional Damage", color: "purple" },
   { fileName: "continue.mp3", name: "To Be Continued", color: "darkorange" },
-  { fileName: "ah-shit-here-we-go-again.mp3",name: "Again",color: "darkorange"},
+  {
+    fileName: "ah-shit-here-we-go-again.mp3",
+    name: "Again",
+    color: "darkorange",
+  },
   { fileName: "perfect-fart.mp3", name: "Fart Wet", color: "green" },
   { fileName: "dry-fart.mp3", name: "Fart Dry", color: "green" },
   { fileName: "bombastic-side-eye.mp3", name: "Side Eye", color: "purple" },
@@ -20,7 +24,11 @@ const sounds = [
   { fileName: "chinese-rap-song.mp3", name: "Rap Song", color: "" },
   { fileName: "laugh.mp3", name: "HAHA", color: "blue" },
   { fileName: "wide-putin.mp3", name: "Wide Putin", color: "limegreen" },
-  { fileName: "toothless-dancing.mp3",name: "Dragon Dance",color: "limegreen"},
+  {
+    fileName: "toothless-dancing.mp3",
+    name: "Dragon Dance",
+    color: "limegreen",
+  },
   { fileName: "yeah-boiii.mp3", name: "Yeah Boi", color: "limegreen" },
   { fileName: "clash-royale-hog-rider.mp3", name: "Hog Rider", color: "" },
   { fileName: "gay-echo.mp3", name: "Gay Echo", color: "" },
@@ -60,4 +68,15 @@ const createSoundBoard = (audioscr) => {
 
 sounds.forEach((soundObj) => {
   soundBoard.append(createSoundBoard(soundObj));
+});
+
+const volumeSlider = document.getElementById("volumeSlider");
+
+volumeSlider.addEventListener("input", (El) => {
+  const volume = El.target.value;
+  sounds.forEach((soundObj) => {
+    if (soundObj.audioEl) {
+      soundObj.audioEl.volume = volume;
+    }
+  });
 });
