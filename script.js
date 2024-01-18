@@ -20,8 +20,8 @@ const sounds = [
   { fileName: "best-friends.mp3", name: "Best Friends", color: "blue" },
   { fileName: "they-ask.mp3", name: "You're Fine", color: "purple" },
   { fileName: "suprise-mf.mp3", name: "Suprise Mf", color: "red" },
-  { fileName: "your-phone-linging.mp3", name: "Phone Linging", color: "" },
-  { fileName: "chinese-rap-song.mp3", name: "Rap Song", color: "" },
+  { fileName: "downer_noise.mp3", name: "Sad Trumpet", color: "" },
+  { fileName: "nooo.mp3", name: "Nooo", color: "" },
   { fileName: "laugh.mp3", name: "HAHA", color: "blue" },
   { fileName: "wide-putin.mp3", name: "Wide Putin", color: "limegreen" },
   {
@@ -30,8 +30,8 @@ const sounds = [
     color: "limegreen",
   },
   { fileName: "yeah-boiii.mp3", name: "Yeah Boi", color: "limegreen" },
-  { fileName: "clash-royale-hog-rider.mp3", name: "Hog Rider", color: "" },
-  { fileName: "gay-echo.mp3", name: "Gay Echo", color: "" },
+  { fileName: "obi-wan-hello-there.mp3", name: "Obi-Wan", color: "" },
+  { fileName: "spongebob-fail.mp3", name: "Fail", color: "" },
 ];
 
 const soundBoard = document.getElementById("soundboard");
