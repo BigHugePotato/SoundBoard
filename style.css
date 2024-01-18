@@ -77,8 +77,23 @@ button[title]:hover::after {
   opacity: 1;
 }
 
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.options button {
+  height: 3rem;
+  width: 4rem;
+  background-color: red;
+  color: #ffffff;
+}
+
+
 #volumeControl {
-  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -112,14 +127,14 @@ button[title]:hover::after {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 620px) {
   #soundboard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 80vw;
-    height: 70vh;
+    width: 100vw;
+    height: 90vh;
     padding: 5px;
     gap: 0.3rem;
 
@@ -133,7 +148,7 @@ button[title]:hover::after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 
-  
+/* names does not show on smaller screens, needs to get fixed. Text to big for the buttons  */
 button[title]:hover::after {
   visibility: hidden;
   opacity: 0;

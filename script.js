@@ -81,20 +81,22 @@ volumeSlider.addEventListener("input", (El) => {
   });
 });
 
+
 // Make the stop button element.
 const stopButton = document.getElementById("stopButton");
-// Append the stop button to the body or another element on your page.
-document.options.append(stopButton);
+
 
 // Add a click event listener to the stop button.
 stopButton.addEventListener("click", () => {
   sounds.forEach((soundObj) => {
-    // If the sound object has an 'audioEl' and it is playing, pause it.
+
+    // If the sound has an 'audioEl' and it is playing, we pause it.
     if (soundObj.audioEl && !soundObj.audioEl.paused) {
       soundObj.audioEl.pause();
       soundObj.audioEl.currentTime = 0;
       soundObj.isPlaying = false;
 
+      // Useing template literals to insert the sound object's name.
       const soundButton = soundBoard.querySelector(
         `button[title='${soundObj.name}']`
       );
