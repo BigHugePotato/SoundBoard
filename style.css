@@ -92,7 +92,6 @@ button[title]:hover::after {
   color: #ffffff;
 }
 
-
 #volumeControl {
   width: 100%;
   display: flex;
@@ -137,7 +136,6 @@ button[title]:hover::after {
     height: 90vh;
     padding: 5px;
     gap: 0.3rem;
-
   }
 
   button {
@@ -148,9 +146,9 @@ button[title]:hover::after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 
-/* names does not show on smaller screens, needs to get fixed. Text to big for the buttons  */
-button[title]:hover::after {
-  visibility: hidden;
-  opacity: 0;
-}
+  /* names does not show on smaller screens, needs to get fixed. Text to big for the buttons  */
+  button[title]:hover::after {
+    visibility: hidden;
+    opacity: 0;
+  }
 }

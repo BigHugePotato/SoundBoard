@@ -81,15 +81,12 @@ volumeSlider.addEventListener("input", (El) => {
   });
 });
 
-
 // Make the stop button element.
 const stopButton = document.getElementById("stopButton");
-
 
 // Add a click event listener to the stop button.
 stopButton.addEventListener("click", () => {
   sounds.forEach((soundObj) => {
-
     // If the sound has an 'audioEl' and it is playing, we pause it.
     if (soundObj.audioEl && !soundObj.audioEl.paused) {
       soundObj.audioEl.pause();
