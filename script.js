@@ -80,3 +80,27 @@ volumeSlider.addEventListener("input", (El) => {
     }
   });
 });
+
+// Make the stop button element.
+const stopButton = document.getElementById("stopButton");
+// Append the stop button to the body or another element on your page.
+document.options.append(stopButton);
+
+// Add a click event listener to the stop button.
+stopButton.addEventListener("click", () => {
+  sounds.forEach((soundObj) => {
+    // If the sound object has an 'audioEl' and it is playing, pause it.
+    if (soundObj.audioEl && !soundObj.audioEl.paused) {
+      soundObj.audioEl.pause();
+      soundObj.audioEl.currentTime = 0;
+      soundObj.isPlaying = false;
+
+      const soundButton = soundBoard.querySelector(
+        `button[title='${soundObj.name}']`
+      );
+      if (soundButton) {
+        soundButton.classList.remove("playing");
+      }
+    }
+  });
+});
